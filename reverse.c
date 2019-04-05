@@ -1,24 +1,20 @@
-using System;
-
-static class StringHelper
+#include <stdio.h>
+ 
+reverse()
 {
-    /// <summary>
-    /// Receives string and returns the string with its letters reversed.
-    /// </summary>
-    public static string ReverseString(string s)
-    {
-        char[] arr = s.ToCharArray();
-        Array.Reverse(arr);
-        return new string(arr);
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine(StringHelper.ReverseString("framework"));
-        Console.WriteLine(StringHelper.ReverseString("samuel"));
-        Console.WriteLine(StringHelper.ReverseString("example string"));
-    }
+   int n, reverse = 0;
+ 
+   printf("Enter a number to reverse\n");
+   scanf("%d", &n);
+ 
+   while (n != 0)
+   {
+      reverse = reverse * 10;
+      reverse = reverse + n%10;
+      n       = n/10;
+   }
+ 
+   printf("Reverse of entered number is = %d\n", reverse);
+ 
+   return 0;
 }
