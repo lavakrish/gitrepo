@@ -1,6 +1,6 @@
 #include <stdio.h>
  
-int main()
+factorial()
 {
   int c, n, fact = 1;
  
